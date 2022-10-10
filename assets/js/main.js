@@ -282,6 +282,7 @@ function validateInputs(){
     const numberValue = number.value.trim();
     const emailValue = email.value.trim();
     const subjectValue = subject.value.trim();
+    const contentValue = content.value.trim();
 
     var flag = 2;
 
@@ -326,12 +327,23 @@ function validateInputs(){
     if (subjectValue === '') {
         setError(subject, 'This field cannot be empty');
         flag = 1;
-    } else if (subjectValue.length < 30) {
-        setError(subject, 'Subject should be 20 characters or more');
+    } else if (subjectValue.length < 20) {
+        setError(subject, 'Subject should be atleast 20 characters');
         flag = 1;
     } else {
         setSuccess(subject);
     }
+    if (contentValue == '') {
+      setError(content, 'This field cannot be empty');
+      flag = 1;
+  } else if (contentValue.length <=30) {
+      setError(content, 'Message should be aleast 30 characters');
+      flag = 1;
+  } else {
+      setSuccess(content);
+  }
+
+    
 
 
 

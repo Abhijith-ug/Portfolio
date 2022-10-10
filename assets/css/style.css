@@ -1224,12 +1224,20 @@ a:hover {
 .php-email-form button[type=submit]:hover {
   background: #3393ff;
 }
+
 .error {
   color: rgb(231, 97, 2);
 }
 
 .formgroup.success input {
   border-color: rgb(26, 208, 26);
+}
+
+.formgroup.success textarea {
+  border-color: rgb(26, 208, 26);
+}
+.formgroup.error textarea {
+  border-color: red;
 }
 
 .formgroup.error input {
